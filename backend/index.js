@@ -3,6 +3,7 @@ const connectDB = require("./config/db");
 const dotenv = require("dotenv");
 var cors = require('cors')
 const userRoutes = require('./routes/userRoutes')
+const chatRoutes = require('./routes/chatRoutes')
 const  chats  = require('./data/data')
 dotenv.config();
 
@@ -12,6 +13,7 @@ app.use(cors())
 app.use(express.json());
 
 app.use('/api/user',userRoutes)
+app.use('/api/chat',chatRoutes)
 app.get("/api/chats", (req, res) => {
     res.send(chats)
 });
