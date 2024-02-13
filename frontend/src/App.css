@@ -21,3 +21,13 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.headerBox{
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  width: 100% !important;
+  align-items: center;
+  padding: 5px 10px 5px 10px;
+  border-width: 5px;
+}
