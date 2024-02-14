@@ -102,7 +102,7 @@ function SideDrawer() {
             };
             const { data } = await axios.post(`http://localhost:5000/api/chat`, { userId }, config);
 
-            // if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
+            if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
             setSelectedChat(data);
             setLoadingChat(false);
             onClose();
@@ -134,7 +134,7 @@ function SideDrawer() {
                 <div>
                     <Menu>
                         <MenuButton p={1}>
-                             
+
                             <BellIcon fontSize="2xl" m={1} />
                         </MenuButton>
                     </Menu>
@@ -183,7 +183,7 @@ function SideDrawer() {
                                 />
                             ))
                         )}
-                        {loadingChat && <Spinner ml="auto" d="flex" />}
+                        {loadingChat && <Spinner ml="auto" display="flex" />}
                     </DrawerBody>
                 </DrawerContent>
             </Drawer>
